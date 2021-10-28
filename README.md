@@ -9,14 +9,14 @@ In this approach, we first try to solve the classification problem by starting f
 To construct our neural network, we first formulated a linear programming framework and found an equivalent optimization problem. We have implemented a recursive algorithm for the given optimization problem to build a tree structured neural network starting from a single neuron.
 
 
-Objectives:
+## Objectives:
 1. According to the given algorithm, we expected the training accuracy to increase progressively with each new child layer and ultimately rise to 1.
 
 2. We also expected the testing accuracy to increase as we go down the tree deeper but fall after a peak is reached. This is when we start overfitting the data to achieve a 100% training accuracy.
 
 
 
-Advantages of the Model:
+## Advantages of the Model:
 
 • No hyperparameter tuning is required to train the model, unlike the training of neural networks, where we have to tweak several hyperparameters to obtain the optimum results. This reduces the training time of our model.
 
@@ -34,7 +34,7 @@ While implementing the linprog library for solving the optimize function, we wer
 The next challenge we faced was the problem of class imbalance, which occurred when we had a set of classes such that the samples in either of the correctly classified classes C1 or C2 were 0. This led to a recurring loop in our optimization problem and the network would start to grow in one of the directions indefinitely. To solve this problem, we used Twin Support Vector Machines [2] to solve for the network whenever we encountered the class imbalance. Using the Twin SVM classifier along with the previously built neuron structure, we tried to build the tree structure that tackled the problem in an efficient manner.
 
 
-Results:
+## Results:
 
 The following results obtained were in coherence with our expectations.
 
@@ -52,7 +52,7 @@ We stop the growth of the model when the network starts to overfit the data- poi
 
 We are grateful to Prof. Jayadeva for giving us this opportunity to work with him. His guidance, advice and educative discussions were a source of great motivation for us.
 
-References:
+## References:
 
 [1] Dr, Jayadeva & Deb, Alok & Chandra, Suresh. (2002). Binary classification by SVM based tree type neural networks.
 
